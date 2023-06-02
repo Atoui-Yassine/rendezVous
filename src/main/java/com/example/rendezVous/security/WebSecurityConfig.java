@@ -61,13 +61,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests().antMatchers("/upload-dir/**").permitAll()
 
                 .antMatchers("/api/test/**" ,"/images/**").permitAll()
-                .antMatchers("/api/auth/**").permitAll()
+                .antMatchers("/api/auth/**","api/categories/**","api/category/**","api/user/**").permitAll()
 
 
                 .antMatchers(HttpMethod.POST, "/api/files/**").authenticated()
-                .antMatchers(HttpMethod.GET, "/api/images/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/images/**").permitAll();
 
-                .anyRequest().authenticated();
+                //.anyRequest().authenticated();
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }

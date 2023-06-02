@@ -16,7 +16,7 @@ public class AddressRequest {
     @NotNull
     @DecimalMin(value = "-90.00")
     @DecimalMax(value = "90.00")
-    private Double lar,lan;
+    private Double lar, lon;
     private String fullAddress;
     private String country,province,city;
 

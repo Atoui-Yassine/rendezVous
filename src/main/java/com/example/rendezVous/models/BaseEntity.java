@@ -1,5 +1,7 @@
 package com.example.rendezVous.models;
 
+import com.example.rendezVous.DTOs.views.View;
+import com.fasterxml.jackson.annotation.JsonView;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,11 +20,14 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BaseEntity {
+    @JsonView(View.base.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @CreationTimestamp
-    private Date createdAt;
+    private LocalDateTime createdAt;
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    private boolean enabled=false;
 }

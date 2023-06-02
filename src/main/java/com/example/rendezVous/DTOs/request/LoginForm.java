@@ -9,7 +9,6 @@ import javax.validation.constraints.NotBlank;
 public class LoginForm {
 
     @NotBlank
-    @Email
     private String email;
     @NotBlank
     private String password;

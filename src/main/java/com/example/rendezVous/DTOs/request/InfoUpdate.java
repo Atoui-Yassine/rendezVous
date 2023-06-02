@@ -27,10 +27,14 @@ public class InfoUpdate {
     private String bio ;
     private String jobTitle ;
     private Date dob ;
+    private Integer duration;
 
+
+
+    private Double priceHeure;
     private  String photoUrl ;
 
-    private  String adresse ;
+
     private List<String> eduProfile;
     private List<String> ExpProfile;
     private List<String> skiProfile;
@@ -109,13 +113,7 @@ public class InfoUpdate {
         this.photoUrl = photoUrl;
     }
 
-    public String getAdresse() {
-        return adresse;
-    }
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
 
     public Set<ExtraInfo> getEduProfile() {
         return toExtraInfo(eduProfile);
@@ -149,5 +147,20 @@ public class InfoUpdate {
 
     public void setCoverUrl(String coverUrl) {
         this.coverUrl = coverUrl;
+    }
+    public Integer getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Integer duration) {
+        this.duration = duration;
+    }
+
+    public Double getPriceHeure() {
+        return priceHeure;
+    }
+
+    public void setPriceHeure(Double priceHeure) {
+        this.priceHeure = priceHeure;
     }
 }

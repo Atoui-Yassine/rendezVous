@@ -1,22 +1,67 @@
 package com.example.rendezVous.models.Categories;
 
 import com.example.rendezVous.models.BaseEntity;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.example.rendezVous.models.userModel.Img;
+import com.fasterxml.jackson.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Category extends BaseEntity {
 
+
+    @Column(name = "name", nullable = false)
     private String name;
-    @JsonIgnore
-    private Long parent;
+   // @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "parent_id")
+    private Category parent;
 
+   // @JsonManagedReference
+    @OneToMany(mappedBy = "parent")
+    private Set<Category> childCategories=new HashSet<>();
 
+    @OneToOne
+    private Img image;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Category getParent() {
+        return parent;
+    }
+
+    public void setParent(Category parent) {
+        this.parent = parent;
+    }
+
+    public Set<Category> getChildCategories() {
+        return childCategories;
+    }
+
+    public void setChildCategories(Set<Category> childCategories) {
+        this.childCategories = childCategories;
+    }
+
+    public Img getImage() {
+        return image;
+    }
+
+    public void setImage(Img image) {
+        this.image = image;
+    }
 }

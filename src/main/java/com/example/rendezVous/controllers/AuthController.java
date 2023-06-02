@@ -34,7 +34,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = "*",maxAge = 3600)
 @RestController
 @RequestMapping("api/auth")
 public class AuthController {
@@ -73,7 +72,11 @@ public class AuthController {
                 .collect(Collectors.toList());
 
         return ResponseEntity.ok(JwtResponse.builder()
-                .token(jwt).refreshToken(refreshJwt).roles(roles).build());
+                .token(jwt)
+                .refreshToken(refreshJwt)
+                .roles(roles)
+
+                .build());
 
 
     }

@@ -38,7 +38,10 @@ public class RendezVousApplication {
 				);
 				Role userRole = roleService.findByName(ERole.ROLE_ADMIN)
 						.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+				Role userRole2 = roleService.findByName(ERole.ROLE_USER)
+						.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 				user.getRoles().add(userRole);
+				user.getRoles().add(userRole2);
 				userRepository.save(user);
 			}
 		};
