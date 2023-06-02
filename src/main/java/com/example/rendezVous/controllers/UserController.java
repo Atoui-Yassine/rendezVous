@@ -2,13 +2,13 @@ package com.example.rendezVous.controllers;
 
 import com.example.rendezVous.DTOs.request.AddressRequest;
 import com.example.rendezVous.DTOs.request.InfoUpdate;
-<<<<<<< Updated upstream
+
 import com.example.rendezVous.DTOs.specification.UserParams;
 import com.example.rendezVous.models.Categories.Category;
-import com.example.rendezVous.models.adress.Address;
-=======
+
+
 import com.example.rendezVous.models.address.Address;
->>>>>>> Stashed changes
+
 import com.example.rendezVous.models.userModel.Img;
 import com.example.rendezVous.models.userModel.UserModel;
 import com.example.rendezVous.services.categoriesService.CategoryService;
