@@ -2,9 +2,13 @@ package com.example.rendezVous.models.userModel;
 
 import com.example.rendezVous.DTOs.views.View;
 import com.example.rendezVous.models.BaseEntity;
+<<<<<<< Updated upstream
 import com.example.rendezVous.models.Categories.Category;
 import com.example.rendezVous.models.adress.Address;
 import com.example.rendezVous.models.rendezVous.RendezVous;
+=======
+import com.example.rendezVous.models.address.Address;
+>>>>>>> Stashed changes
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.AllArgsConstructor;

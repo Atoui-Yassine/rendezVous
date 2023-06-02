@@ -8,9 +8,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+<<<<<<< Updated upstream
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+=======
+>>>>>>> Stashed changes
 import java.util.Set;
 
 @Entity
@@ -19,6 +22,7 @@ import java.util.Set;
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Category extends BaseEntity {
 
+<<<<<<< Updated upstream
 
     @Column(name = "name", nullable = false)
     private String name;
@@ -26,6 +30,15 @@ public class Category extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "parent_id")
     private Category parent;
+=======
+    @Column(name = "name", nullable = false)
+    private String name;
+    @ManyToOne
+    @JoinColumn(name = "parentid")
+    private Category parent;
+    @OneToMany(mappedBy = "parent")
+    private Set<Category> childCategories;
+>>>>>>> Stashed changes
 
    // @JsonManagedReference
     @OneToMany(mappedBy = "parent")

@@ -1,6 +1,5 @@
 package com.example.rendezVous.DTOs.request;
 
-import com.example.rendezVous.models.adress.Address;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,9 +1,12 @@
-package com.example.rendezVous.models.adress;
+package com.example.rendezVous.models.address;
 
 import com.example.rendezVous.DTOs.views.View;
 import com.example.rendezVous.models.BaseEntity;
+<<<<<<< Updated upstream:src/main/java/com/example/rendezVous/models/adress/Address.java
 import com.example.rendezVous.models.userModel.UserModel;
 import com.fasterxml.jackson.annotation.JsonView;
+=======
+>>>>>>> Stashed changes:src/main/java/com/example/rendezVous/models/address/Address.java
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
